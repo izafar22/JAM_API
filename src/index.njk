@@ -4,11 +4,14 @@ layout: base.njk
 ---
 
 <div class="container">
-        <h1>This is a page for u</h1>
-        <div class="vibe">You are great!</div>
-        <div class="love">
-            <p>love</p>
-        </div>
+    <ul>
+    {% for article in news.articles %}
+    <li>
+    <h2><a href="">{{ article.title}}</a></h2>
+    <span>{{ article.source.name}} <time> {{article.publishedAt }}</time></span>
+    </li>
+    {% endfor %}
+    </ul>
     </div>
     <script src="/js/vibe.js">
         
